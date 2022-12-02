@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>忘记密码</title>
+    <link href="__CSS__/vendors.css" rel="stylesheet">
+    <link href="__CSS__/app.css" rel="stylesheet">
+</head>
+<style>
+   
+</style>
+<body >
+    <div class="ui centered grid container stackable mt-5 pt-3">
+    <div class="six wide column">
+    <div class="ui stacked segment">
+        <div class="content">
+            <h2>忘记密码</h2>
+
+            <div class="ui divider"></div>
+    <form class="ui form login" role="form" method="POST" action="{:url('index/updatePassword')}" accept-charset="UTF-8">
+        <input type="hidden" name="_token" value="jaBcEJFLK8Wv9nWYcwvgMdACzi91S1pTHmOiTMhJ">
+        <input type="hidden" name="remember" value="yes">
+    
+        <input type="hidden" name="return_back" value="no">
+    
+      <div class="field">
+        <div class="ui left icon input">
+         
+            <span class="ui left icon youxiang" style="position: absolute;left:10px;top:10px">📩</span><input type="text" name="username" placeholder="邮 箱 or 手 机 or 用户名" value="" required="">
+          </div>
+      </div>
+      <div class="field">
+        <div class="ui left icon input">
+            
+            <span class="ui left icon mima " style="position: absolute;left:10px;top:10px">🔑</span><input type="password" name="Perviouspassword" placeholder="旧密 码" value="" required="" >
+    
+    
+          </div>
+      </div>
+      <div class="field">
+        <div class="ui left icon input">
+            
+            <span class="ui left icon mima " style="position: absolute;left:10px;top:10px">🔑</span><input type="password" name="password" placeholder="新密码" value="" required="" id="pwd1">
+    
+    
+          </div>
+      </div>
+      <button class="ui green right labeled icon button" type="submit" >
+       <span style="margin-right:10px; ">👍</span>
+        提交
+      </button>
+      </form>
+      </div>
+      </div>
+      </div>
+</body>
+</html>

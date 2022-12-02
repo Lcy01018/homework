@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<html lang="zh" class="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="baidu-site-verification" content="MfC8ppEukL">
+  <meta baidu-gxt-verify-token="fa750b19bb54c9ad03503638f41923db">
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="jaBcEJFLK8Wv9nWYcwvgMdACzi91S1pTHmOiTMhJ">
+
+        <title>用户登录 | LearnKu 终身编程者的知识社区</title>
+      <meta name="description" content="专为终身学习者定制的编程知识社区">
+    <meta name="keywords" content="Laravel,Go,PHP,Vue.js,Python,Java,MySQL,Rust,LK,Elasticsearch,F2E 前端,Server,程序员,Database,DevTools,Computer Science,手机开发,AdonisJS">
+    
+    <meta name="author" content="Summer">
+
+         
+    
+    <!-- 样式 -->
+    <link href="__CSS__/vendors.css" rel="stylesheet">
+    <link href="__CSS__/app.css" rel="stylesheet">
+
+      </head>
+
+  <body class=" auth-login-page">
+
+
+    <style>
+      .ui.top.menu {
+        border-top: 4px solid #00b5ad;
+      }
+
+      .ui.fluid.search .results {
+        width: 550px;
+      }
+
+      @media  only screen and (max-width: 767px) {
+        .ui.top.menu>.ui.container {
+          height: 52px;
+          flex-direction: initial;
+        }
+      }
+
+      
+      /* 顶部导航栏 */
+      .ui.top.menu {
+        border-top: 4px solid #00b5ad;
+      }
+
+      /* 右边导航栏顶部样式 */
+      .ui.top-color.segment:not(.inverted) {
+        border-top: 2px solid #00b5ad;
+      }
+
+      /* 右边导航栏顶部样式 */
+      .ui.top-color.card:not(.inverted) {
+        border-top: 2px solid #00b5ad;
+      }
+
+      a {
+        color: #1775cc;
+      }
+
+      a:hover,
+      a:focus {
+        color: #0081f9;
+        transition: color .15s ease 0s;
+      }
+
+      /* 主要按钮 */
+
+      .ui.primary.buttons .button,
+      .ui.primary.button {
+        background-color: #00b5ad;
+        border-color: #00b5ad;
+      }
+
+      /* 主要按钮选中状态 */
+      .ui.primary.buttons .button:hover,
+      .ui.primary.button:hover,
+      .ui.primary.button:focus,
+      .ui.primary.buttons .button:focus {
+        background-color: #00b5ad;
+        border-color: #00b5ad;
+      }
+
+      /* 外框按钮 */
+      .ui.basic.primary.buttons .button,
+      .ui.basic.primary.button {
+        color: #00b5ad !important;
+        box-shadow: 0px 0px 0px 1px #00b5ad inset !important;
+      }
+
+      /* 外框按钮选中状态 */
+      .ui.basic.primary.buttons .button:hover,
+      .ui.basic.primary.button:hover {
+        color: #00b5ad !important;
+        box-shadow: 0px 0px 0px 1px #00b5ad inset !important;
+      }
+
+      .ui.basic.primary.buttons .button:active,
+      .ui.basic.primary.button:active,
+      .ui.basic.primary.buttons .active.button,
+      .ui.basic.primary.active.button,
+      .ui.basic.buttons .button:hover,
+      .ui.basic.button:hover,
+      .ui.basic.primary.buttons .button:focus,
+      .ui.basic.primary.button:focus {
+        color: #00b5ad !important;
+        box-shadow: 0px 0px 0px 1px #00b5ad inset !important;
+      }
+
+      .footer {
+        max-height: max-content;
+      }
+   
+    </style>
+
+    
+
+    
+
+    <div class="ui top menu sidebar stackable">
+      <div class="item">
+                  <img class="ui image" style="width:26px;height:26px;margin-top:-2px;" src="../uploads/images/201901/24/1/OyBnfB2vlk.png!/both/44x44-1">
+          <span class="site-name ml-2">LearnKu</span>
+              </div>
+
+
+
+      <form class="ui fluid category  item secondary" action="" method="post">
+        <div class="ui icon input">
+          <input class="prompt" name="q" type="text" placeholder="搜索" value="">
+          
+        </div>
+      </form>
+
+
+      <a href="https://learnku.com" class="item secondary">
+       话题列表
+      </a>
+
+      
+              <div class="item">
+          <a class="ui basic small button no-pjax" href="login.html">
+          </a>
+        </div>
+
+        <div class="item">
+          <a class="ui basic small button no-pjax" href="https://learnku.com/auth/register">
+            注册 </a>
+        </div>
+          </div>
+
+              
+    <div class="pusher">
+
+      <div class="main container">
+
+        <nav class="ui main borderless menu top stackable topnav" id="topnav">
+          <div class="ui container">
+
+            <div class="ui inline scrolling community-nav dropdown mr-2" style="padding-left: 22px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;">
+              <div class="text site-logo" style="color:#888888;display: flex;">
+
+                                  <img class="ui image" style="width:26px;height:26px;margin-top:-2px;" src="__IMG__/logo.png">
+                  <span class="site-name">LearnKu </span>
+                                
+              </div>
+              <div class="menu ml-4 communities" style="max-height: 520px;padding: 8px;">
+
+                <div class="ui icon search input" style="width: 172px;float:left;">
+  
+                  <input type="text" placeholder="搜索社区">
+                </div>
+
+                <a class="item pr-3 mt-2" href="https://learnku.com">
+                  <img class="ui image" style="width:20px;height:20px;margin-top:-2px;" src="../uploads/images/201901/24/1/OyBnfB2vlk.png!/both/44x44-1"> 首页
+                </a>
+
+
+                <div class="divider clearfix"></div>
+
+                                
+                     
+
+              </div>
+            </div>
+
+            <a class="item header right menu " style="display:none">
+           
+            </a>
+
+            <a href="https://learnku.com/topics" class="item secondary">
+              社区
+            </a>
+
+
+                          <a href="https://learnku.com/activities" class="item secondary">
+                动态
+              </a>
+            
+            
+            <form class="ui fluid category search item secondary hide-on-991" action="https://learnku.com/search" method="GET">
+              <div class="ui icon input">
+                <input class="prompt" name="q" type="text" placeholder="整站搜索" value="">
+            
+              </div>
+              <div class="results"></div>
+            </form>
+
+            <div class=" right menu stackable secondary">
+                              <div class="item rm-link-color">
+                  <a class="mr-4 no-pjax login_required" href="{:url('user/login')}"><span >🐵</span>登录 </a>
+                  <a class="no-pjax" href="{:url('user/reg')}" style="margin-left: 10px;"><span>🐒</span>注册 </a>
+                               
+
+                </div>
+                          </div>
+
+          </div>
+
+                  </nav>
+
+        
+        
+                                                                      
+
+        
+                  <div class="mb-3 hide show-on-wechat-view">
+            <div class="ui centered grid container message-container">
+              <div class="sixteen wide column pt-0 pb-0">
+                <a class="ui button fluid green wechat-login-link" href="">
+                  微信登录</a>
+              </div>
+            </div>
+          </div>
+        
+            <div class="ui centered grid container stackable mt-5 pt-3">
+        <div class="six wide column">
+          <div class="ui stacked segment">
+            <div class="content">
+                <h2>请登录</h2>
+
+                <div class="ui divider"></div>
+
+  <form class="ui form login" role="form" method="POST" action="{:url('index/doLogin')}" >
+    <input type="hidden" name="" value="">
+    <input type="hidden" name="" value="">
+
+    <input type="hidden" name="return_back" value="no">
+
+  <div class="field">
+    <div class="ui left icon input">
+     
+        <span class="ui left icon youxiang" style="position: absolute;left:10px;top:10px">📩</span><input type="text" name="unicks" placeholder="邮 箱 or 手 机 or 用户名" value="" required="">
+      </div>
+  </div>
+  <div class="field">
+    <div class="ui left icon input">
+        
+        <span class="ui left icon mima " style="position: absolute;left:10px;top:10px">🔑</span><input type="password" name="upass" placeholder="密 码" value="" required="">
+      </div>
+  </div>
+  <!-- <div class="field">
+    <div class="ui left icon input">
+      </div>
+  </div> -->
+  
+  <button class="ui green right labeled icon button" type="submit" >
+   <span style="margin-right:10px;">👍</span>
+    提交
+  </button>
+</form>  
+    <div class="pull-right mt-2 rm-link-color">
+        <a class="btn btn-link " href="{:url('user/forgetPage')}" target="_blank">
+            忘记密码?
+        </a>
+        <span class="text-mute">or</span>
+        <a class="btn btn-link " href="reg.html" target="_blank">
+            注册
+        </a>
+    </div>
+
+    <div class="clearfix"></div>
+
+
+  <div class="ui horizontal divider fs-tiny text-mute">
+    第三方账号登录
+  </div>
+
+
+
+  <a class="ui button fluid mt-2 basic wechat-login-link" href=""> 微信登录</a>
+
+  <a class="ui button fluid mt-2 basic" id="login-required-submit" href=""> GitHub 登录</a>
+
+
+              
+            </div>
+          </div>
+        </div>
+    </div>
+      </div>
+
+      <div class="ui inverted vertical footer segment">
+        <div class="ui center aligned container">
+
+          
+          <div class="ui extra-padding center" name="recommended" id="recommended" style="padding:15px">
+
+    <div class="rm-link-color d-flex mb-1 mt-3" style="justify-content: center;">
+      <h3 class="rm-tdu">
+        <a href="https://learnku.com/contact?code=sponsor"> 社区赞助商</a>
+      </h3>
+    </div>
+
+    
+    <div class="ui grid p-1 mt-1" style="justify-content: center;">
+      <div class="six column row ui stackable">
+                  <div class="column ">
+            <a rel="nofollow noopener noreferrer" class="color-normal mt-3 display-block" href="https://www.upyun.com/" target="&quot;_blank&quot;" title="又拍云-加速在线业务" style="    line-height: 28px;">
+              <img src="__IMG__/youpaiyun.png" title="又拍云-加速在线业务" class="ui popover" style="width:150px; max-height:45px;  margin: 3px 0;">
+            </a>
+          </div>
+                  <div class="column ">
+            <a rel="nofollow noopener noreferrer" class="color-normal mt-3 display-block" href="https://zhaopin.comiru.cn/home?from=lc" target="&quot;_blank&quot;" title="日本招聘" style="    line-height: 28px;">
+              <img src="__IMG__/japan.png" title="日本招聘" class="ui popover" style="width:150px; max-height:45px;  margin: 3px 0;">
+            </a>
+          </div>
+              </div>
+    </div>
+
+
+    <div class="pt-2 text-mute" style="justify-content: center;">
+      <a class="flex-right tdu rm-link-color" target="_blank" href="https://learnku.com/contact?code=sponsor">
+        成为赞助商
+      </a>
+    </div>
+
+
+  </div>
+
+
+          <div class="ui inverted section divider"></div>
+
+          <div class="ui stackable inverted divided grid">
+            <div class="four wide column">
+              <h4 class="ui inverted header">
+                <img src="__IMG__/bottom_logo.png" alt="" style="width: 32px;border-radius: 6px;position: relative;top: -5px;">
+                关于 LearnKu
+              </h4>
+              <div class="ui inverted  text-center">
+                <div class="lh-3">LearnKu 是终身编程者的修道场</div>
+                <div class="lh-3">做最专业、严肃的技术论坛</div>
+              </div>
+
+              <div class="ui inverted  text-center mt-3 rm-link-color tdu">
+               <a href="https://learnku.com/articles/28735">LearnKu 诞生的故事</a>
+              </div>
+            </div>
+            <div class="four wide column">
+              <h4 class="ui inverted header">资源推荐</h4>
+              <div class="ui inverted link list">
+                <li class="mb-1">
+                  <a class="item" href="https://learnku.com/docs/guide">
+                    《社区使用指南》
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a class="item" href="https://learnku.com/docs/writing-docs">
+                    《文档撰写指南》
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a class="item" href="https://learnku.com/docs/guide/protocol/4992">
+                    《LearnKu 社区规范》
+                  </a>
+                </li>
+                <li class="mb-1">
+                  <a class="item" href="https://learnku.com/docs/guide/smart-questions/2032">
+                    《提问的智慧》
+                  </a>
+                </li>
+              </div>
+            </div>
+            <div class="four wide column">
+              <h4 class="ui inverted header">服务提供商</h4>
+              <div class="ui inverted link list">
+                                                      <a href="https://passport.ucloud.cn/?invitation_code=rami45zj5kpm&ytag=reZ5E7" rel="nofollow noopener noreferrer" class="item" target="_blank" style="line-height: 28px;">
+                      <img src="__IMG__/ucloud.png" title="本站服务器由 UCloud 赞助" class="ui popover" style="height: 20px;margin-bottom: -4px;margin-right: 3px;display: inline-block;">
+                    </a>
+                                      <a href="https://www.upyun.com/" rel="nofollow noopener noreferrer" class="item" target="_blank" style="line-height: 28px;">
+                      <img src="__IMG__/youpaiyun_bottom.png" title="社区 CDN 赞助商" class="ui popover" style="height: 20px;margin-bottom: -4px;margin-right: 3px;display: inline-block;">
+                    </a>
+                                      <a href="http://www.sendcloud.net/" rel="nofollow noopener noreferrer" class="item" target="_blank" style="line-height: 28px;">
+                      <img src="__IMG__/sendcloud.png" title="订阅邮件赞助商：SendCloud" class="ui popover" style="height: 20px;margin-bottom: -4px;margin-right: 3px;display: inline-block;">
+                    </a>
+                                                </div>
+            </div>
+            <div class="four wide column">
+              <h4 class="ui inverted header">其他信息</h4>
+              <div class="ui inverted link list">
+
+                <li>
+                  <a class="item" href="https://learnku.com/docs/guide/administrator/4485">
+                     成为版主
+                  </a>
+                </li>
+                <li>
+                  <a class="item" href="https://learnku.com/quizzes">
+                    所有测验
+                  </a>
+                </li>
+                <li>
+                  <a class="item" href="https://learnku.com/contact">
+                    联系站长（反馈建议）
+                  </a>
+                </li>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui inverted section divider"></div>
+          <div style="color: rgb(137, 137, 140);font-size:0.9em;" class="rm-link-color">
+            <p>
+              <a href="http://beian.miit.gov.cn/" target="_blank">粤ICP备18099781号-6</a>
+              <span class="mx-2">|</span>
+              <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502004330" target="_blank"><img src="__IMG__/gongan.png" width="20" style="position: relative;top: 4px;"> 粤公网安备 44030502004330号</a>
+              <span class="mx-2">|</span>
+              <a href="https://learnku.com/lk">违法和不良信息举报</a>
+            </p>
+            <p style=" margin-top:-8px;margin-bottom: -0px;" class="ui inverted signature">
+              由 <a href="https://learnku.com/contact" target="_blank" style="color: inherit;">Summer</a> 设计和编码 <span style="color: #e27575;font-size: 14px;">❤</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+
+      
+    </div>
+
+    
+
+
+  
+
+
+  </body>
+
+  
+  
+
+  
+  </html>
